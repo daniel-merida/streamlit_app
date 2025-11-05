@@ -5,6 +5,19 @@ from io import BytesIO
 st.set_page_config(page_title="Análise Exploratória - Streamlit", layout="wide")
 
 st.title("Análise Exploratória e Pré-processamento")
+
+st.markdown("""
+Este ambiente interativo realiza **análise exploratória e pré-processamento de dados de vendas**.  
+Consolida métricas de desempenho por canal e subcanal, identifica clientes com venda zero (30, 60 e 90 dias), executa segmentações de clientes via **Pareto** com base no volume e detecta **outliers de comportamento**, oferecendo uma visão clara sobre padrões, anomalias e oportunidades de negócio.
+
+**Principais outputs:**
+
+📊 **Resumo por canal e subcanal** — médias, dispersões e totais  
+🧩 **Clientes com vendas zeradas** — 30, 60 e 90 dias  
+🧭 **Segmentação Pareto** — principais contribuidores de volume  
+🚨 **Detecção de outliers** — análises por canal e cliente
+""")
+
 st.write("Faça upload de um CSV de vendas; o app executa as funções do seu notebook e gera um Excel com várias abas.")
 
 # -----------------------------
