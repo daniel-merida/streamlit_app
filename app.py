@@ -412,6 +412,9 @@ uploaded_file = st.file_uploader("Faça upload do CSV de entrada", type=["csv"],
 #    incluir_venda_zero = st.checkbox("Incluir venda zero nas métricas de Resumo Canal", value=True)
 #    deltas_input = st.text_input("Deltas para outlier (separados por vírgula)", value="1.5,2,2.5,3")
 
+incluir_venda_zero = True
+deltas_input = "1.5,2,2.5,3"
+
 if uploaded_file is not None:
     try:
         df = pd.read_csv(uploaded_file)
@@ -513,6 +516,6 @@ if uploaded_file is not None:
 
 st.markdown("---")
 st.write("**Instruções rápidas:**")
-st.write("1. Garanta que o CSV contenha todas as colunas necessárias: `Client_ID`, `Nome`, `Latitud`, `Longitud`, `Adress`, `Segment`, `KO_Class`, `Channel`, `Subchannel`, `Category_Product`, `'Mes' (formato AAAAMM)`, `Valor`, `")
+st.write("1. Garanta que o CSV contenha todas as colunas necessárias: `Client_ID`, `Nome`, `Latitud`, `Longitud`, `Adress`, `Segment`, `KO_Class`, `Channel`, `Subchannel`, `Category_Product`, `'Mes' (formato AAAAMM)`, `Valor`.")
 st.write("2. Clique em `Executar análise`.")
 st.write("3. Baixe o arquivo Excel gerado.")
